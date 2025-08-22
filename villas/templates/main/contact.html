@@ -1,0 +1,304 @@
+{% extends "base.html" %} {% load static %} {% block title %}Contact Us - Masaar
+3 Sharjah{% endblock %} {% block content %}
+
+<!-- Global success toast (shows after redirect) -->
+<div id="success-toast" role="alert" aria-live="polite" aria-atomic="true">
+  <strong id="success-title">Form submitted successfully!</strong>
+  <p id="success-body">Thank you! We will reply to you soon.</p>
+  <button type="button" id="success-close" aria-label="Close">×</button>
+</div>
+
+<style>
+  /* ===== Success toast ===== */
+  #success-toast {
+    position: fixed;
+    top: 80px;
+    right: 16px;
+    display: none; /* toggled by .show */
+    background: #111;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    max-width: min(420px, 92vw);
+  }
+  #success-toast.show {
+    display: block;
+  }
+  #success-toast #success-title {
+    font-size: 1rem;
+    margin: 0 2rem 0.25rem 0;
+    display: block;
+  }
+  #success-toast #success-body {
+    margin: 0.2rem 0 0;
+  }
+  #success-toast #success-close {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  @media (max-width: 576px) {
+    #success-toast {
+      top: auto;
+      bottom: 16px;
+      right: 12px;
+    }
+  }
+
+  /* ===== Page styles ===== */
+  .hero-contact {
+    background: url('{% static "images/img12.jpg" %}') center/cover no-repeat;
+    min-height: 100svh;
+    padding-top: 6rem; /* space for navbar */
+    padding-bottom: 6rem; /* keep footer off image edge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+  }
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  select option {
+    color: black;
+  }
+
+  /* Ensure last blocks don't create extra gap */
+  .hero-contact .container > *:last-child,
+  .hero-contact .p-4:last-child,
+  .hero-contact .p-4 .small:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  footer,
+  .site-footer {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  @media (max-width: 767.98px) {
+    .hero-contact {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+</style>
+
+<!-- Full Screen Background with Transparent Form -->
+<section class="hero-contact text-center position-relative">
+  <!-- dark overlay -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="background: rgba(0, 0, 0, 0.5); z-index: 0"
+  ></div>
+
+  <div class="container position-relative" style="z-index: 1">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5 text-white">
+        <div
+          class="p-4 rounded shadow-lg"
+          style="background: rgba(0, 0, 0, 0.75)"
+        >
+          <h5 class="mb-3 fw-bold text-shadow">
+            Find Your Dream Best Villa For Sale in Sharjah – Masaar 3
+          </h5>
+          <p class="mb-4 text-shadow">
+            Contact Us Now <br />
+            <a
+              href="tel:+971543447441"
+              class="fw-bold text-white text-decoration-underline"
+              >Or Call Us at +971 54 344 7441</a
+            >
+          </p>
+
+          <!-- CONTACT FORM (Web3Forms Free: no webhook) -->
+          <form
+            id="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="post"
+            class="text-start"
+            novalidate
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="6ba4ddc2-a6f7-4330-848d-1eb2d72a5cdc"
+            />
+            <!-- Redirect gets filled with ?submitted=1&name=...&s=callback -->
+            <input
+              type="hidden"
+              name="redirect"
+              id="contact-redirect"
+              value="/"
+            />
+            <!-- Optional helpers -->
+            <input type="hidden" name="from_name" value="Website Lead" />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Lead (Contact Form)"
+            />
+            <input type="hidden" name="page_url" id="page_url_b" value="" />
+            <input type="hidden" name="referrer" id="referrer_b" value="" />
+            <div
+              style="
+                position: absolute;
+                left: -9999px;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+              "
+            >
+              <label>Leave this field empty</label>
+              <input
+                type="text"
+                name="botcheck"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="name"
+              class="form-control mb-3 bg-transparent text-white border-light"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              class="form-control mb-3 bg-transparent text-white border-light"
+              placeholder="+971 (000) 000-000"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              class="form-control mb-3 bg-transparent text-white border-light"
+              placeholder="Email"
+              required
+            />
+
+            <select
+              name="property_type"
+              class="form-select mb-3 bg-transparent text-white-50 border-light"
+              required
+            >
+              <option value="">
+                What type of property are you interested in?
+              </option>
+              <option value="villa">Villa</option>
+              <option value="townhouse">Townhouse</option>
+              <option value="apartment">Apartment</option>
+            </select>
+
+            <select
+              name="bedroom_type"
+              class="form-select mb-3 bg-transparent text-white-50 border-light"
+              required
+            >
+              <option value="">What is your preferred bedroom type?</option>
+              <option value="2br">2 Bedroom</option>
+              <option value="3br">3 Bedroom</option>
+              <option value="4br">4 Bedroom</option>
+              <option value="5br">5+ Bedroom</option>
+            </select>
+
+            <textarea
+              name="requirements"
+              class="form-control mb-3 bg-transparent text-white-50 border-light"
+              rows="3"
+              placeholder="Your property requirements (Optional)"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="btn w-100 fw-bold text-dark"
+              style="background-color: #d4a853"
+            >
+              Submit
+            </button>
+          </form>
+
+          <p class="mt-3 small text-white-90 fw-bold mb-0">
+            By clicking submit you agree to the terms and conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Populate context fields
+  (function () {
+    const pageUrlB = document.getElementById("page_url_b");
+    const refB = document.getElementById("referrer_b");
+    if (pageUrlB) pageUrlB.value = window.location.href;
+    if (refB) refB.value = document.referrer || "";
+  })();
+
+  // Redirect decorator: adds ?submitted=1&name=...&s=callback
+  (function wireRedirect() {
+    const form = document.getElementById("contact-form");
+    const redirectInput = document.getElementById("contact-redirect");
+    if (!form || !redirectInput) return;
+
+    form.addEventListener(
+      "submit",
+      function () {
+        const name = (
+          form.querySelector('input[name="name"]')?.value || ""
+        ).trim();
+        const url = new URL(window.location.origin + window.location.pathname);
+        url.searchParams.set("submitted", "1");
+        url.searchParams.set("s", "callback");
+        if (name) url.searchParams.set("name", name);
+        redirectInput.value = url.toString();
+      },
+      { passive: true }
+    );
+  })();
+
+  // Show success toast if redirected back here
+  (function showToastIfSubmitted() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("submitted") !== "1") return;
+
+    const name = (params.get("name") || "").trim();
+    const toast = document.getElementById("success-toast");
+    const title = document.getElementById("success-title");
+    const body = document.getElementById("success-body");
+
+    if (name) title.textContent = `Thanks, ${name}!`;
+    body.textContent = "Thanks! We’ll call you back soon.";
+
+    toast.classList.add("show");
+
+    const closeBtn = document.getElementById("success-close");
+    if (closeBtn)
+      closeBtn.addEventListener("click", () => toast.classList.remove("show"));
+    setTimeout(() => toast.classList.remove("show"), 5000);
+
+    // Clean URL so it doesn't reappear on refresh
+    const clean = new URL(window.location.href);
+    clean.searchParams.delete("submitted");
+    clean.searchParams.delete("name");
+    clean.searchParams.delete("s");
+    window.history.replaceState({}, "", clean.toString());
+  })();
+</script>
+
+{% endblock %}

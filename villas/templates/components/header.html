@@ -1,0 +1,133 @@
+{% load static %}
+
+<style>
+  /* NAVBAR */
+  .navbar-brand img {
+    height: 55px;
+    width: auto;
+  }
+  /* Use same social icon style everywhere (navbar + footer) */
+  :root {
+    --gold: #d4af37;
+    --footer-bg: #111;
+  }
+  .social-icon {
+    background: #fff;
+    color: var(--gold) !important; /* fixed gold icon */
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+  }
+  .social-icon:hover {
+    transform: scale(1.06);
+  }
+  /* Make navbar social anchors use the circular style */
+  .navbar .nav-link.social-icon {
+    padding: 0; /* remove default link padding */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+</style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="{% url 'villas:home' %}">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Left Links -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'villas:location' %}">LOCATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'villas:overview' %}">OVERVIEW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'villas:gallery' %}">GALLERY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'villas:amenities' %}"
+              >AMENITIES</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'villas:payment_plan' %}"
+              >PAYMENT PLAN</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'villas:contact' %}">CONTACT US</a>
+          </li>
+        </ul>
+
+        <!-- Right Social Icons (now styled same as footer) -->
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a
+              class="nav-link social-icon"
+              href="https://www.instagram.com/infinixinfinityproperty/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link social-icon"
+              href="https://wa.me/971501234567"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link social-icon"
+              href="https://www.linkedin.com/company/infinix-infinity-realestate/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link social-icon"
+              href="https://www.facebook.com/infinixinfinityproperty/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+staticfiles_collected

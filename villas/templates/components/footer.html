@@ -1,0 +1,103 @@
+{% load static%}
+<head> </head>
+<style>
+  /* FOOTER */
+  .footer {
+    background-color: var(--footer-bg);
+  }
+  .tilda-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .tilda-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #888;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  .tilda-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
+  }
+  .tilda-link:hover .tilda-circle {
+    border-color: var(--gold);
+    color: var(--gold);
+    box-shadow: 0 0 8px var(--gold), 0 0 15px var(--gold);
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  .pt-5 {
+    padding-top: 2rem !important;
+  }
+  @media (min-width: 768px) {
+    .container,
+    .container-md,
+    .container-sm {
+      max-width: 100%;
+    }
+  }
+
+  .footer .d-flex.align-items-center.gap-3 {
+    gap: 12px; /* controls spacing between icons */
+  }
+
+  .footer .social-icon:last-child {
+    margin-right: 8px; /* small gap after last icon */
+  }
+</style>
+<!-- Footer -->
+<footer class="footer text-white py-4">
+  <div
+    class="container d-flex flex-column flex-md-row align-items-center justify-content-between"
+  >
+    <!-- Footer Logo (larger) -->
+    <div class="d-flex align-items-center gap-2">
+      <img src="{% static 'images/logo.png' %}" alt="Masaar Logo" height="64" />
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center my-3 my-md-0">© All rights reserved</div>
+
+    <!-- Footer Social Icons (same style as navbar) -->
+    <div class="d-flex align-items-center gap-3">
+      <a
+        href="https://www.facebook.com/infinixinfinityproperty/"
+        class="social-icon"
+        aria-label="Facebook"
+        ><i class="bi bi-facebook"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/company/infinix-infinity-realestate/"
+        class="social-icon"
+        aria-label="LinkedIn"
+        ><i class="bi bi-linkedin"></i
+      ></a>
+      <a
+        href="https://wa.me/971501234567"
+        class="social-icon"
+        aria-label="WhatsApp"
+        ><i class="bi bi-whatsapp"></i
+      ></a>
+    </div>
+  </div>
+
+  <!-- Made on Tilda -->
+  <div class="text-center mt-3">
+    <a href="#" class="tilda-link">
+      <span class="tilda-circle">T</span> Made on Tilda
+    </a>
+  </div>
+</footer>

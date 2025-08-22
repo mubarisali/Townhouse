@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% load static %} {% block title %}About Masaar 3 -
+Overview{% endblock %} {% block content %}
+<section class="py-5 mt-5" id="about" style="padding-top: 6rem">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <!-- Left Text -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3 text-center">
+          About Masaar 3 Sharjah by Arada – A Green Gated Community with 50,000+
+          Trees
+        </h2>
+        <p class="lead mb-3 text-center">
+          Masaar 3 is a nature-led residential sanctuary in Sharjah, featuring
+          townhouses & villas designed for modern living. This gated community
+          offers spacious homes, serene surroundings, and world-class amenities.
+        </p>
+        <p class="mb-0 text-center">
+          Find the perfect balance between luxury and nature at Masaar.<br />
+          Enjoy private pools, contemporary designs,<br />
+          and premium amenities while being surrounded by natural beauty.
+        </p>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-md-6">
+        <!-- Ratio box keeps consistent height and removes uneven bottom gap -->
+        <div class="ratio ratio-16x9 rounded shadow overflow-hidden">
+          <img
+            src="{% static 'images/img14.jpg' %}"
+            alt="Masaar 3 Overview"
+            class="w-100 h-100"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,323 @@
+{% extends "base.html" %} {% load static %} {% block title %}Payment Plan –
+Masaar 3 Sharjah{% endblock %} {% block content %}
+<style>
+  /* Hero sizing + compensate for fixed navbar height */
+  .hero-full {
+    min-height: 100vh;
+    padding-top: 4rem; /* adjust if your navbar is taller/shorter */
+    padding-bottom: 3rem;
+  }
+  .hero-full h1 {
+    margin-top: -1rem;
+  }
+  /* Keep H2 readable and aligned with screenshot feel */
+  .lead-h2 {
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 900px;
+    font-size: clamp(1.125rem, 2.2vw, 1.6rem);
+  }
+
+  /* Arrow wrappers don’t affect layout */
+  .arrow-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .arrow-wrap svg {
+    position: absolute;
+    pointer-events: none;
+  }
+  /* Curved arrow (desktop/tablet) */
+  .arrow-curved {
+    left: -90px;
+    top: -35px;
+    width: 85px;
+    height: auto;
+  }
+  /* Straight arrow (mobile) – shown below the button */
+  .arrow-straight {
+    position: static; /* place it under the button */
+    display: block;
+    margin: 0.75rem auto 0 auto;
+    width: 46px;
+    height: auto;
+  }
+
+  /* Button weight similar to screenshot */
+  .btn-cta {
+    font-weight: 800;
+    letter-spacing: 0.4px;
+  }
+</style>
+
+<section class="py-5 text-center" style="background-color: #000; color: #fff">
+  <div class="container">
+    <!-- Heading -->
+    <h2 class="fw-bold mb-2">Limited Villas Available Masaar 3</h2>
+    <h4 class="fw-bold mb-4">Book a Free Consultation Today</h4>
+
+    <!-- Description -->
+    <p class="mb-4" style="max-width: 700px; margin: 0 auto">
+      Masaar villas are selling fast!
+      <strong>Schedule a free consultation</strong> with our experts and explore
+      the
+      <strong>best investment in UAE and living options.</strong>
+    </p>
+
+    <!--  Button -->
+    <a
+      href="{% url 'villas:contact' %}"
+      class="btn fw-bold px-4 py-2"
+      style="background-color: #d6a756; color: #000; border-radius: 5px"
+    >
+      BOOK FREE CONSULTATION NOW
+    </a>
+  </div>
+</section>
+
+<section id="cta-payment-alt" class="position-relative text-white py-5 py-lg-6">
+  <!-- Background -->
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+
+  <div class="container position-relative" style="z-index: 1">
+    <div class="row g-4 align-items-stretch">
+      <!-- LEFT: CTA / Contact -->
+      <div class="col-12 col-lg-6">
+        <div class="glass-card h-100 p-4 p-md-5">
+          <p class="fw-bold mb-3 fs-5">
+            <em>📩 Request Floor Plans &amp; Brochure of Masaar 3</em>
+          </p>
+
+          <div
+            class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4"
+          >
+            <a
+              href="https://wa.me/971543447441"
+              target="_blank"
+              class="btn btn-success fw-bold px-4 rounded-pill"
+              >WhatsApp Now</a
+            >
+            <a
+              href="{% url 'villas:contact' %}"
+              class="btn btn-outline-light fw-bold px-4 rounded-pill"
+              >Request Call Back</a
+            >
+          </div>
+
+          <div class="mb-4">
+            {% comment %}
+            <div
+              class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3"
+              style="letter-spacing: 0.3px"
+            >
+              Direct From Developer – 0% Commission
+            </div>
+            {% endcomment %}
+            <h3 class="fw-bold mb-1 fs-6 text-uppercase opacity-75">
+              WhatsApp Now
+            </h3>
+            <h2 class="fw-bold mb-3 fs-3">+971 54 344 7441</h2>
+            <div
+              class="d-flex flex-column flex-sm-row gap-2 align-items-center"
+            >
+              <span class="fw-semibold">Book Your Viewing at</span>
+              <span class="fw-bold">Masaar 3</span>
+            </div>
+          </div>
+
+          <hr
+            class="my-4"
+            style="border-color: rgba(255, 255, 255, 0.25); opacity: 0.7"
+          />
+
+          <p class="mb-0" style="opacity: 0.9">
+            Premium townhouses and villas in Masaar 3 are waiting for you.
+            Contact us now to get personalized property recommendations.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Payment plan -->
+      <div class="col-12 col-lg-6">
+        <div class="glass-card h-100 p-4 p-md-5">
+          <h3 class="fw-bold text-uppercase mb-2">
+            Sharjah Masaar 3 Payment Plan
+          </h3>
+          <div
+            class="d-inline-block px-3 py-1 mb-3 rounded fw-bold"
+            style="
+              background: rgba(45, 47, 51, 0.9);
+              color: #fff;
+              letter-spacing: 0.3px;
+            "
+          >
+            STARTING PRICE - AED 1.79 MILLION
+          </div>
+
+          <p class="fw-semibold mb-4" style="opacity: 0.9">
+            BOOK WITH 5% ONLY.
+          </p>
+
+          <!-- Chips -->
+          <div class="row g-3 mb-4">
+            <div class="col-12 col-sm-4">
+              <div class="chip-card text-center p-3 h-100">
+                <div class="chip-value">5%</div>
+                <div class="chip-text">Down Payment</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4">
+              <div class="chip-card text-center p-3 h-100">
+                <div class="chip-value">35%</div>
+                <div class="chip-text">During Construction</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4">
+              <div class="chip-card text-center p-3 h-100">
+                <div class="chip-value">60%</div>
+                <div class="chip-text">On Handover</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="fw-bold mb-2">Forest Community in Sharjah, UAE</h4>
+          <p class="mb-0" style="opacity: 0.85">
+            Premium townhouses and villas in Masaar 3 are waiting for you!
+            Contact us now to get personalized property recommendations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Background + overlay */
+  #cta-payment-alt .cta-bg {
+    position: absolute;
+    inset: 0;
+    background: url('{% static "images/masaar_bg.jpg" %}') center/cover
+      no-repeat;
+    z-index: 0;
+  }
+  @media (min-width: 992px) {
+    #cta-payment-alt .cta-bg {
+      background-attachment: fixed;
+    }
+  }
+  #cta-payment-alt .cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        60% 80% at 20% 20%,
+        rgba(0, 0, 0, 0.55),
+        transparent 70%
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65));
+    z-index: 0;
+  }
+
+  /* Glass cards */
+  #cta-payment-alt .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Payment chips */
+  #cta-payment-alt .chip-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+  }
+  #cta-payment-alt .chip-value {
+    font-weight: 800;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    line-height: 1;
+  }
+  #cta-payment-alt .chip-text {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0.35rem;
+    opacity: 0.9;
+    font-size: 0.9rem;
+  }
+
+  /* Spacing helpers */
+  .py-lg-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (max-width: 991.98px) {
+    .py-lg-6 {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+  }
+</style>
+<!-- ========== villas & townhouse price ========== -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <!-- Heading -->
+    <h3 class="fw-bold text-center mb-4">
+      Villas & Townhouses at Masaar 3 Sharjah
+    </h3>
+
+    <!-- Table -->
+    <div class="table-responsive d-flex justify-content-center">
+      <table
+        class="table table-striped table-bordered text-center align-middle"
+        style="width: 90%; max-width: 1100px; font-size: 1.05rem"
+      >
+        <thead class="border-dark">
+          <tr style="height: 70px">
+            <th class="fw-semibold">Property Type</th>
+            <th class="fw-semibold">Size (Sqft)</th>
+            <th class="fw-semibold">Price (AED)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="height: 65px">
+            <td>2BR Townhouse</td>
+            <td>1,789</td>
+            <td>AED 1.79M</td>
+          </tr>
+          <tr style="height: 65px">
+            <td>3BR Townhouse</td>
+            <td>2,116 - 2,129</td>
+            <td>AED 2.3M</td>
+          </tr>
+          <tr style="height: 65px">
+            <td>4BR Townhouse</td>
+            <td>2,634</td>
+            <td>AED 2.7M</td>
+          </tr>
+          <tr style="height: 65px">
+            <td>4BR Villa</td>
+            <td>3,183 - 3,772</td>
+            <td>AED 3.2M - AED 3.9M</td>
+          </tr>
+          <tr style="height: 65px">
+            <td>4BR Signature Villa</td>
+            <td>4,846</td>
+            <td>AED 4.99M</td>
+          </tr>
+          <tr style="height: 65px">
+            <td>5BR Villa</td>
+            <td>4,683 - 5,831</td>
+            <td>AED 5.59M - 6.8M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- HERO / Black CTA Banner -->
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% load static %} {% block title %}Masaar 3 Villas &
+Townhouses{% endblock %} {% block content %}
+<!-- Hero Section -->
+
+<!-- Hero Section -->
+<section class="hero-masaar">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <!-- Left: Headings -->
+    <div class="hero-copy">
+      <h1>
+        Luxury Villas & Townhouses for<br />
+        Sale in Masaar 3 by Arada, Sharjah
+      </h1>
+
+      <p class="hero-sub">
+        Masaar 3 Sharjah Townhouses & Villas — Limited Units Available
+      </p>
+
+      <p class="hero-tag">
+        <strong
+          >Freehold Villas For All — Own a Villa with Just 5% Down
+          Payment</strong
+        >
+      </p>
+    </div>
+
+    <!-- Right: Form Card -->
+    <aside class="hero-form">
+      <h3>Contact us now!</h3>
+
+      <form action="#" method="post" class="form-grid" novalidate>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Name" required />
+        </label>
+
+        <label class="phone-group">
+          <span>Phone</span>
+          <div class="phone-wrap">
+            <span class="flag">🇦🇪</span>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+971 00-000-0000"
+              inputmode="tel"
+              required
+            />
+          </div>
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="Email" required />
+        </label>
+
+        <button type="submit">SUBMIT</button>
+
+        <p class="policy">
+          By signing up, you agree to our <a href="#">Privacy Policy</a>.
+        </p>
+      </form>
+    </aside>
+  </div>
+</section>
+
+<!-- HERO: Masaar 3 Centered -->
+<section class="masaar-hero">
+  <div class="masaar-overlay"></div>
+
+  <div class="masaar-center">
+    <!-- Logo -->
+    <img
+      src="/static/images/logo.png"
+      alt="Masaar by Arada"
+      class="masaar-logo"
+    />
+
+    <!-- Headings -->
+    <p class="masaar-kicker">Masaar 3 by Arada</p>
+    <p class="masaar-ar">مسار 3</p>
+
+    <h1 class="masaar-title">FREE HOLD PROPERTIES FOR ALL NATIONALITIES</h1>
+
+    <p class="masaar-sub">
+      2 – 5 Bedroom Townhouses & Villas For Sustainable Living in Sharjah
+    </p>
+
+    <!-- CTA (link style as in screenshot) -->
+    <a href="#booking" class="masaar-cta">Pay AED 50,000 on Booking</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "base.html" %} {% load static %} {% block title %}Amenities - Masaar
+3{% endblock %} {% block content %}
+<section class="py-5 mt-5 bg-light" style="padding-top: 6rem">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">
+      Amenities at Masaar 3 Townhouses & Villas in Sharjah
+    </h2>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-bicycle display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">Cycling Path Proximity</h5>
+            <p class="card-text">
+              Enjoy easy access to a 6.6 kilometer cycling path for an active
+              lifestyle.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-music-note-beamed display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">Entertainment & Retail</h5>
+            <p class="card-text">
+              Conveniently located near vibrant entertainment and retail areas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <img
+              src="{% static 'images/tennis.png.webp' %}"
+              alt="Sports Facilities Access"
+              class="mb-3"
+              style="width: 70px; height: 70px; object-fit: contain"
+            />
+            <h5 class="card-title fw-bold">Sports Facilities Access</h5>
+            <p class="card-text">
+              A variety of sports facilities to stay fit and healthy in easy
+              reach.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-house-heart display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">Tree-Integrated Properties</h5>
+            <p class="card-text">
+              Every home integrates trees into its design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row g-4 mt-3">
+      <!-- Card 5 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-bricks display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">Modern Design</h5>
+            <p class="card-text">
+              Contemporary homes feature natural light from floor-to-ceiling
+              windows.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-wifi display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">Smart Homes</h5>
+            <p class="card-text">
+              Each home includes cutting-edge smart home features as standard.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-book display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">International School</h5>
+            <p class="card-text">
+              Walking distance to a renowned international school for families.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-tree display-4 text-dark mb-3"></i>
+            <h5 class="card-title fw-bold">Natural Green Spine</h5>
+            <p class="card-text">
+              Direct access to forested jogging tracks, walks, and quiet zones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

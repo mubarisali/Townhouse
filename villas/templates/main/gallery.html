@@ -1,0 +1,105 @@
+{% extends "base.html" %} {% load static %} {% block title %}About Masaar 3 -
+Overview{% endblock %} {% block content %}
+
+<style>
+  /* Make all gallery images fill their cards evenly */
+  #gallery .card {
+    overflow: hidden; /* keeps rounded corners clean */
+  }
+  #gallery .card-img-top {
+    height: 250px; /* pick the height you like */
+    object-fit: cover; /* fill without distortion */
+    width: 100%;
+  }
+</style>
+
+<!-- add mt-5 and a small top padding to clear the navbar -->
+<section class="py-5 mt-5" id="gallery" style="padding-top: 6rem">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Masaar 3 Photo Gallery</h2>
+
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img1.webp' %}"
+            class="card-img-top"
+            alt="Photo 1"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img2.webp' %}"
+            class="card-img-top"
+            alt="Photo 2"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img3.webp' %}"
+            class="card-img-top"
+            alt="Photo 3"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img4.webp' %}"
+            class="card-img-top"
+            alt="Photo 4"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img5.webp' %}"
+            class="card-img-top"
+            alt="Photo 5"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img6.jpeg' %}"
+            class="card-img-top"
+            alt="Photo 6"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img7.jpeg' %}"
+            class="card-img-top"
+            alt="Photo 7"
+          />
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100 border-0">
+          <img
+            src="{% static 'images/img8.jpeg' %}"
+            class="card-img-top"
+            alt="Photo 8"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

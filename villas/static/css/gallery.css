@@ -1,0 +1,57 @@
+/* Grid item card with aspect ratio and subtle hover */
+.gallery-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    /* elegant standard thumbnail */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    transition: transform .25s ease, box-shadow .25s ease;
+    background: #f7f7f7;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item:hover .gallery-card {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: rgba(0, 0, 0, .85);
+    padding: 3vh 3vw;
+}
+
+.lightbox.open {
+    display: block;
+}
+
+.lightbox-content {
+    display: block;
+    max-width: 92vw;
+    max-height: 92vh;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    font-size: 36px;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    line-height: 1;
+    cursor: pointer;
+}
