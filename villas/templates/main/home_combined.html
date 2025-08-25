@@ -302,7 +302,8 @@
 <section class="py-5" id="gallery">
   <div class="container">
     <h2 class="fw-bold text-center mb-4">Masaar 3 Photo Gallery</h2>
-    <div class="row g-3 justify-content-center">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+
       <div class="col-6 col-md-4 col-lg-3"><div class="card shadow-sm h-100 border-0"><img src="{% static 'images/img1.webp' %}" class="card-img-top" alt="Photo 1"></div></div>
       <div class="col-6 col-md-4 col-lg-3"><div class="card shadow-sm h-100 border-0"><img src="{% static 'images/img2.webp' %}" class="card-img-top" alt="Photo 2"></div></div>
       <div class="col-6 col-md-4 col-lg-3"><div class="card shadow-sm h-100 border-0"><img src="{% static 'images/img3.webp' %}" class="card-img-top" alt="Photo 3"></div></div>
@@ -317,21 +318,23 @@
 
 <!-- ========== Location & Connectivity ========== -->
 <section class="position-relative text-center text-white" id="location-hero"
-  style="background: url('{% static "images/img13.jpg" %}') center/cover no-repeat; height: 70vh;">
+  style="background: url('{% static "images/img13.jpg" %}') center/cover no-repeat; min-height: 70vh;">
   <div class="d-flex h-100 justify-content-center align-items-center">
-    <div class="text-dark p-5 p-md-5 rounded shadow" style="max-width: 700px; width: 90%; background-color: rgba(255, 255, 255, 0.8);">
+    <div class="text-dark p-4 p-md-5 rounded shadow w-100" style="max-width: 700px; background-color: rgba(255, 255, 255, 0.85);">
       <h2 class="fw-bold mb-3">Why Invest in Masaar 3</h2>
-      <p class="mb-3 fs-5 fw-bold">Close to Masaar 2 – Sharjah Villas & Townhouses</p>
+      <p class="mb-3 fs-6 fs-md-5 fw-bold">Close to Masaar 2 – Sharjah Villas & Townhouses</p>
+      
       <ul class="text-start fs-6 mb-3">
         <li><strong>Prime Location:</strong> Close to Sharjah landmarks & Dubai connectivity</li>
         <li><strong>Sustainable Living:</strong> Green spaces, jogging/cycling tracks & meditation zones</li>
         <li><strong>High ROI:</strong> Perfect for investors & long-term residents</li>
       </ul>
-      <h2 class="fw-bold mt-4 mb-2 fs-5">Masaar 3 Sharjah Location & Connectivity</h2>
+
+      <h2 class="fw-bold mt-4 mb-2 fs-6 fs-md-5">Masaar 3 Sharjah Location & Connectivity</h2>
       <ul class="text-start fs-6 mb-0">
-        <li><strong>Central Park: </strong> 2 Minutes</li>
-        <li><strong>Tilaal Mall: </strong> 2 Minutes</li>
-        <li><strong>Sharjah Corniche: </strong> 20 Minutes</li>
+        <li><strong>Central Park:</strong> 2 Minutes</li>
+        <li><strong>Tilaal Mall:</strong> 2 Minutes</li>
+        <li><strong>Sharjah Corniche:</strong> 20 Minutes</li>
         <li><strong>Dubai International Airport:</strong> 20 Minutes</li>
         <li><strong>Sharjah International Airport:</strong> 15 Minutes</li>
         <li><strong>SAIF Zone:</strong> 15 Minutes</li>
@@ -339,6 +342,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- ========== Quick Stats ========== -->
 <section class="py-5 bg-light text-center" id="quick-stats">
